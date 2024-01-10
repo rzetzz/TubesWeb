@@ -2,9 +2,13 @@
 @section('main')
     
 
-<h1 class="fw-bold mb-5">Login</h1>
-<form action="/sesi/login" method="POST">
+<h1 class="fw-bold mb-5">Register</h1>
+<form action="/sesi/create" method="POST">
     @csrf
+    <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" name="name" class="form-control" />
+    </div>
     <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="email" name="email" class="form-control" />
@@ -15,12 +19,12 @@
     </div>
     <div class="mb-3 d-grid">
     <button name="submit" type="submit" class="btn btn-primary bg-dark">
-        LOGIN
+        REGISTER
     </button>
     </div>
 </form>
-<p>Don't have an account ? 
-    <a href="/sesi/register">Register</a></p>
+<p>Already have an account ? 
+<a href="/sesi">Login</a></p>
 
 
 

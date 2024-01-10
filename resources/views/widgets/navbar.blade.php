@@ -10,7 +10,8 @@
         <a href="/sesi/logout" class="my-bt me-5 font-dark fw-bold" style="font-size: 14px;">LOGOUT</a>
       @else
         <a href="/sesi" class="my-bt me-5 font-dark fw-bold" style="font-size: 14px;">LOGIN</a>
-        <button type="button" class="my-bt font-dark fw-bold" style="font-size: 14px;">REGISTER</button>
+        <a href="/sesi/register" class="my-bt me-5 font-dark fw-bold" style="font-size: 14px;">REGISTER</a>
+        
       @endif
       
     </div>

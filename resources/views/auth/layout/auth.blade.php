@@ -13,10 +13,34 @@
 <body>
     <div class="row authdark">
         <div class="col-4 d-flex justify-content-center align-items-center">
-          <h1 class="fw-bold mb-5 font-light text-center">PCTECH</h1>
+          <a href="/" class="text-decoration-none">
+            <h1 class="fw-bold mb-5 font-light text-center">PCTECH</h1>
+        </a>
         </div>
-        <div class="col-8 auth">
-           @yield('main')
+        <div class="col-8 auth d-flex justify-content-center align-items-center">
+          <div class="container">
+            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+            @if(session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if(session('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @yield('main')
+          </div>
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
