@@ -82,9 +82,13 @@ body {
     background-color: #a7a7a7;
 }
 .image-box {
-    min-width: 200px;
-    min-height: 160px;
-    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 160px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .flex-container {
     display: flex;

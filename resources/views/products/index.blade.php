@@ -2,7 +2,7 @@
     <div>  
         <div class="flex-item">
             <div class="image-box">
-                <img src="{{ url($product->gambar) }}" alt="{{ $product->nama }}" style="max-width: 200px;">
+                <img src="{{ url($product->gambar) }}" alt="{{ $product->nama }}" style="max-width: 200px; max-height: 170px;">
             </div>
             <p>{{ $product->category->nama_kategori }}</p>
             <h5 class="fw-bold">{{ $product->nama_produk }}</h5>

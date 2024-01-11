@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
@@ -15,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
 
 Route::get('/', [ProductController::class, 'index']);
-
+Route::get('/admin', [ProductController::class, 'categoryadd']);
+Route::get('/admin/category', [CategoryController::class, 'create']);
+Route::post('/admin/category/create', [CategoryController::class, 'store']);
+Route::post('/admin/create',[ProductController::class,'store']);
 Route::get('/sesi',[SessionController::class,'index']);
 Route::post('/sesi/login',[SessionController::class,'login']);
 Route::get('/sesi/logout',[SessionController::class,'logout']);
